@@ -9,12 +9,13 @@ import SwiftUI
 
 struct LevelOneView: View {
     @Environment(\.dismiss) var dismiss
-    @State private var showFullScreenModal = false
+    @Binding var showFullScreenModal: Bool
+    @Binding var isActive: Bool
     
     var body: some View {
         VStack {
             NavigationLink {
-                LevelTwoView()
+                LevelTwoView(isActive: $isActive)
             } label: {
                 Text("Go deeper")
             }
@@ -29,13 +30,10 @@ struct LevelOneView: View {
             }
             .padding()
         }
-        .fullScreenCover(isPresented: $showFullScreenModal) {
-            LoginView()
-        }
         .navigationTitle("One-Level Navigation View")
     }
 }
 
 #Preview {
-    LevelOneView()
+    LevelOneView(showFullScreenModal: .constant(true), isActive: .constant(true))
 }

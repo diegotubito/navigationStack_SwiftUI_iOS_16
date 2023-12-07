@@ -9,15 +9,16 @@ import SwiftUI
 
 struct HomeView: View {
     @State private var showFullScreenModal = false
+    @State private var isActive = false
     
     var body: some View {
         NavigationView {
             VStack {
                 Text("Home View")
                 Spacer()
-                NavigationLink(destination: LevelOneView()) {
-                    Text("Go to level one")
-                }
+                
+                NavigationLink("Go to Level One", destination: LevelOneView(showFullScreenModal: $showFullScreenModal, isActive: $isActive), isActive: $isActive)
+                
                 .padding()
                 Button("Show Modal View", action: {
                     showFullScreenModal = true
