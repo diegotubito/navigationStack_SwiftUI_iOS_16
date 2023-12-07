@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct LevelOneView: View {
-    @Environment(\.presentationMode) var presentationMode
     @Environment(\.dismiss) var dismiss
+    @State private var showFullScreenModal = false
     
     var body: some View {
         VStack {
@@ -20,10 +20,17 @@ struct LevelOneView: View {
             }
             .padding()
             
+            Button("Show Modal View") {
+                showFullScreenModal = true
+            }
+            
             Button("Programmatically back button") {
-                presentationMode.wrappedValue.dismiss()
+                dismiss()
             }
             .padding()
+        }
+        .fullScreenCover(isPresented: $showFullScreenModal) {
+            LoginView()
         }
         .navigationTitle("One-Level Navigation View")
     }

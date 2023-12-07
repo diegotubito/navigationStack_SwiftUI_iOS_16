@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct HomeView: View {
+    @State private var showFullScreenModal = false
+    
     var body: some View {
         NavigationView {
             VStack {
@@ -16,9 +18,18 @@ struct HomeView: View {
                 NavigationLink(destination: LevelOneView()) {
                     Text("Go to level one")
                 }
+                .padding()
+                Button("Show Modal View", action: {
+                    showFullScreenModal = true
+                })
+                .padding()
                 Spacer()
             }
+            .fullScreenCover(isPresented: $showFullScreenModal) {
+                LoginView()
+            }
         }
+
     }
 }
 
