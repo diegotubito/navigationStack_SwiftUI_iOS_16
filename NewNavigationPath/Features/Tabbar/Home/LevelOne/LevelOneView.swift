@@ -9,7 +9,6 @@ import SwiftUI
 
 struct LevelOneView: View {
     @Environment(\.dismiss) var dismiss
-    @Binding var showFullScreenModal: Bool
     @Binding var isActive: Bool
     
     var body: some View {
@@ -21,10 +20,6 @@ struct LevelOneView: View {
             }
             .padding()
             
-            Button("Show Modal View") {
-                showFullScreenModal = true
-            }
-            
             Button("Programmatically back button") {
                 dismiss()
             }
@@ -35,5 +30,5 @@ struct LevelOneView: View {
 }
 
 #Preview {
-    LevelOneView(showFullScreenModal: .constant(true), isActive: .constant(true))
+    LevelOneView(isActive: .constant(true))
 }

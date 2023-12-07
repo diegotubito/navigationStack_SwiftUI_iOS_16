@@ -15,10 +15,12 @@ struct LevelTwoView: View {
             Button("Go back to root") {
                 isActive = false
             }
+            .padding()
             
             Button("Go back 2 views") {
                 // I can't do that with this approach
             }
+            .padding()
         }
         .navigationTitle("Two-Level Deep Navigation View")
     }
