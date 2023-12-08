@@ -9,17 +9,21 @@ import SwiftUI
 
 struct HomeViewThree: View {
     @Environment(\.dismiss) var dismiss
+    @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
         VStack(spacing: 8) {
             Button("Back") {
-                dismiss()
-            }
-            Button("Go to view 1 - we can't") {
-                // We can't do it with NavigationView
+                // Weird way of dismissing
+                // dismiss()
+                // or we can use the presentationMode
+                presentationMode.wrappedValue.dismiss()
             }
             Button("Go back to root") {
-                // We can do it with navigation view using Bindings or EnvironmentObjects.
+                // We can do this with NavigationView using Bindings or EnvironmentObjects.
+            }
+            Button("Go to view 1 - we can't") {
+                // We can't do that with NavigationView
             }
         }
         .navigationTitle("Home: View 3")
