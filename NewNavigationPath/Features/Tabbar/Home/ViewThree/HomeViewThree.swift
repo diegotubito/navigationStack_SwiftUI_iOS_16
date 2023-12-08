@@ -16,10 +16,10 @@ struct HomeViewThree: View {
                 dismiss()
             }
             Button("Go to view 1 - we can't") {
-                
+                // We can't do it with NavigationView
             }
             Button("Go back to root") {
-                
+                // We can do it with navigation view using Bindings or EnvironmentObjects.
             }
         }
         .navigationTitle("Home: View 3")
