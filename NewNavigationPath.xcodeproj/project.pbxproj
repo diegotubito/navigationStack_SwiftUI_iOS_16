@@ -16,8 +16,9 @@
 		ABAFC6A42B212A69000DD4A4 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAFC6A32B212A69000DD4A4 /* LoginView.swift */; };
 		ABAFC6A62B212A7B000DD4A4 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAFC6A52B212A7B000DD4A4 /* SplashView.swift */; };
 		ABAFC6AA2B212AD1000DD4A4 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAFC6A92B212AD1000DD4A4 /* TabBarView.swift */; };
-		ABAFC6AE2B21321F000DD4A4 /* LevelOneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAFC6AD2B21321F000DD4A4 /* LevelOneView.swift */; };
-		ABAFC6B02B213239000DD4A4 /* LevelTwoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAFC6AF2B213239000DD4A4 /* LevelTwoView.swift */; };
+		ABAFC6AE2B21321F000DD4A4 /* HomeViewOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAFC6AD2B21321F000DD4A4 /* HomeViewOne.swift */; };
+		ABAFC6B02B213239000DD4A4 /* HomeViewTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAFC6AF2B213239000DD4A4 /* HomeViewTwo.swift */; };
+		ABAFC6EA2B22AA13000DD4A4 /* HomeViewThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAFC6E92B22AA13000DD4A4 /* HomeViewThree.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,8 +32,9 @@
 		ABAFC6A32B212A69000DD4A4 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		ABAFC6A52B212A7B000DD4A4 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		ABAFC6A92B212AD1000DD4A4 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
-		ABAFC6AD2B21321F000DD4A4 /* LevelOneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelOneView.swift; sourceTree = "<group>"; };
-		ABAFC6AF2B213239000DD4A4 /* LevelTwoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelTwoView.swift; sourceTree = "<group>"; };
+		ABAFC6AD2B21321F000DD4A4 /* HomeViewOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewOne.swift; sourceTree = "<group>"; };
+		ABAFC6AF2B213239000DD4A4 /* HomeViewTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewTwo.swift; sourceTree = "<group>"; };
+		ABAFC6E92B22AA13000DD4A4 /* HomeViewThree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewThree.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +97,9 @@
 		ABAFC6992B2129D2000DD4A4 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				ABAFC6AB2B213209000DD4A4 /* LevelOne */,
+				ABAFC6E82B22A9B9000DD4A4 /* ViewThree */,
+				ABAFC6AC2B21320F000DD4A4 /* ViewTwo */,
+				ABAFC6AB2B213209000DD4A4 /* ViewOne */,
 				ABAFC69E2B212A0A000DD4A4 /* HomeView.swift */,
 			);
 			path = Home;
@@ -135,21 +139,28 @@
 			path = Settings;
 			sourceTree = "<group>";
 		};
-		ABAFC6AB2B213209000DD4A4 /* LevelOne */ = {
+		ABAFC6AB2B213209000DD4A4 /* ViewOne */ = {
 			isa = PBXGroup;
 			children = (
-				ABAFC6AC2B21320F000DD4A4 /* LevelTwo */,
-				ABAFC6AD2B21321F000DD4A4 /* LevelOneView.swift */,
+				ABAFC6AD2B21321F000DD4A4 /* HomeViewOne.swift */,
 			);
-			path = LevelOne;
+			path = ViewOne;
 			sourceTree = "<group>";
 		};
-		ABAFC6AC2B21320F000DD4A4 /* LevelTwo */ = {
+		ABAFC6AC2B21320F000DD4A4 /* ViewTwo */ = {
 			isa = PBXGroup;
 			children = (
-				ABAFC6AF2B213239000DD4A4 /* LevelTwoView.swift */,
+				ABAFC6AF2B213239000DD4A4 /* HomeViewTwo.swift */,
 			);
-			path = LevelTwo;
+			path = ViewTwo;
+			sourceTree = "<group>";
+		};
+		ABAFC6E82B22A9B9000DD4A4 /* ViewThree */ = {
+			isa = PBXGroup;
+			children = (
+				ABAFC6E92B22AA13000DD4A4 /* HomeViewThree.swift */,
+			);
+			path = ViewThree;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -224,12 +235,13 @@
 			files = (
 				ABAFC69F2B212A0A000DD4A4 /* HomeView.swift in Sources */,
 				ABAFC6A12B212A52000DD4A4 /* SettingView.swift in Sources */,
-				ABAFC6AE2B21321F000DD4A4 /* LevelOneView.swift in Sources */,
+				ABAFC6AE2B21321F000DD4A4 /* HomeViewOne.swift in Sources */,
 				ABAFC6AA2B212AD1000DD4A4 /* TabBarView.swift in Sources */,
 				ABAFC68D2B2127D5000DD4A4 /* ContentView.swift in Sources */,
-				ABAFC6B02B213239000DD4A4 /* LevelTwoView.swift in Sources */,
+				ABAFC6B02B213239000DD4A4 /* HomeViewTwo.swift in Sources */,
 				ABAFC6A42B212A69000DD4A4 /* LoginView.swift in Sources */,
 				ABAFC68B2B2127D5000DD4A4 /* NewNavigationPathApp.swift in Sources */,
+				ABAFC6EA2B22AA13000DD4A4 /* HomeViewThree.swift in Sources */,
 				ABAFC6A62B212A7B000DD4A4 /* SplashView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

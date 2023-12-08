@@ -8,19 +8,16 @@
 import SwiftUI
 
 struct HomeView: View {
-    @State private var isActive = false
-    
     var body: some View {
         NavigationView {
             VStack {
-                Text("Home View")
                 Spacer()
-                NavigationLink("Go to Level One", destination: LevelOneView(isActive: $isActive), isActive: $isActive)
+                NavigationLink("Route to View 1", destination: HomeViewOne())
                 .padding()
                 Spacer()
             }
+            .navigationTitle("Home: Root")
         }
-
     }
 }
 
