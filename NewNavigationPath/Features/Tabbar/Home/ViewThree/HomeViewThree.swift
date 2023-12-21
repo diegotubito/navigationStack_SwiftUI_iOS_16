@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct HomeViewThree: View {
-    @Environment(\.dismiss) var dismiss
+  //  @Environment(\.dismiss) var dismiss
     @Environment(\.presentationMode) var presentationMode
     
     var body: some View {

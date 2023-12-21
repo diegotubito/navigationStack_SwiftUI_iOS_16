@@ -8,13 +8,11 @@
 import SwiftUI
 
 struct LoginView: View {
-    @Environment(\.dismiss) var dismiss
     var body: some View {
         VStack {
             Text("Login View")
             Spacer()
             Button("Dismiss") {
-                dismiss()
             }
         }
     }
