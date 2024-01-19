@@ -8,18 +8,13 @@
 import SwiftUI
 
 struct HomeViewTwo: View {
+    
     var body: some View {
         VStack(spacing: 8) {
-            NavigationLink {
-                HomeViewThree()
-            } label: {
-                Text("Route to View 3")
+            NavigationLink(value: Coordinator.Screen.viewThree) {
+                Text("route to final view")
             }
         }
         .navigationTitle("Home: View 2")
     }
-}
-
-#Preview {
-    HomeViewTwo()
 }

@@ -7,19 +7,26 @@
 
 import SwiftUI
 
-struct HomeViewOne: View {
-    var body: some View {
-        VStack(spacing: 8) {
-            NavigationLink {
-                HomeViewTwo()
-            } label: {
-                Text("Route to View 2")
-            }
-        }
-        .navigationTitle("Home: View 1")
+class HomeOneViewModel: ObservableObject {
+    var receivedValue: String
+    
+    init(receivedValue: String) {
+        self.receivedValue = receivedValue
     }
 }
 
-#Preview {
-    HomeViewOne()
+struct HomeViewOne: View {
+    @EnvironmentObject var coordinator: Coordinator
+    @StateObject var viewmodel: HomeOneViewModel
+    
+    var body: some View {
+        VStack(spacing: 8) {
+            Button("route to view 2") {
+                coordinator.push(.viewTwo)
+            }
+            
+            Text(viewmodel.receivedValue)
+        }
+        .navigationTitle("Home: View 1")
+    }
 }

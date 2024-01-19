@@ -8,28 +8,20 @@
 import SwiftUI
 
 struct HomeViewThree: View {
-  //  @Environment(\.dismiss) var dismiss
-    @Environment(\.presentationMode) var presentationMode
+    @EnvironmentObject var coordinator: Coordinator
     
     var body: some View {
         VStack(spacing: 8) {
             Button("Back") {
-                // Weird way of dismissing
-                // dismiss()
-                // or we can use the presentationMode
-                presentationMode.wrappedValue.dismiss()
+                coordinator.pop()
             }
             Button("Go back to root") {
-                // We can do this with NavigationView using Bindings or EnvironmentObjects.
+                coordinator.popToRoot()
             }
             Button("Go to view 1 - we can't") {
-                // We can't do that with NavigationView
+                coordinator.path.removeLast(2)
             }
         }
         .navigationTitle("Home: View 3")
     }
-}
-
-#Preview {
-    HomeViewThree()
 }
